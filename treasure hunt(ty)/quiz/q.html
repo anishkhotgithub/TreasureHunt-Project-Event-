@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Quiz</title>
+  </head>
+  <body>
+
+
+<style>
+.container{
+width:814px;
+margin:20px auto;
+overflow:auto;
+
+}
+.button1 {
+height: 40px;
+width: 500px;
+font-size: 28px;
+border-color:black;
+}
+}
+.button {
+height: 16px;
+width: 16px;
+font-size: 28px;
+border-color:black;
+}
+.s1{
+  font-size:25px;
+  color:white;
+  font-weight: bold;
+  float: left;
+}
+</style>
+<div class="container">
+  <script type="text/javascript">
+var answers = ["A","B","D","B","C"];
+  tot = answers.length;
+
+function getCheckedValue( radioName ){
+  var radios = document.getElementsByName( radioName );
+  for(var y=0; y<radios.length; y++)
+    if(radios[y].checked) return radios[y].value;
+}
+
+function getScore(){
+var score = 0;
+for (var i=0; i<tot; i++)
+  if(getCheckedValue("question"+i)===answers[i]) score += 1;
+return score;
+}
+
+function returnScore(){
+alert("Your score is "+ getScore() +"/"+ tot);
+var q=getScore();
+if (q>=5)
+window.open("last/last.html")
+else {
+  window.open("q2.html")
+}
+}
+  </script>
+  <div class="s1">
+  <hr>LEVEL <hr />
+  </div>
+  <body bgcolor="black" text="white" background="images.jpg">
+<h1 align=center style="font-family:algerian">.. IT'S QUIZ TIME ..</h1>
+<br>
+<table height="120px" width="810px" border="6px">
+  <tr><td>
+    <ol><li value="1">
+    <h3>WHICH COUNTRY'S FOOTBALL TEAM HAS WON THE 2018 INTERCONTINENTAL CUP FOOTBALL TITLE ??</h3>
+    <input type="radio" name="question0" value="A">INDIA<br><br>
+    <input type="radio" name="question0" value="B">PORTUGAL<br><br>
+    <input type="radio" name="question0" value="C">GERMANY<br><br>
+    <input type="radio" name="question0" value="D">ARGENTINA<br><br>
+  </li>
+</td></tr>
+  <tr><td>
+    <ol><li value="2">
+    <h3>GOLF PLAYER VIJAY SINGH BELONGS TO WHICH COUNTRY ??</h3>
+    <input type="radio" name="question1" value="A">USA<br><br>
+    <input type="radio" name="question1" value="B">FIJI<br><br>
+    <input type="radio" name="question1" value="C">INDIA<br><br>
+    <input type="radio" name="question1" value="D">UK<br><br>
+  </li>
+</td></tr>
+  <tr><td>
+    <ol><li value="3">
+    <h3>.GIF IS EXTENSION OF ??</h3>
+    <input type="radio" name="question2" value="A">VIDEO FILE<br><br>
+    <input type="radio" name="question2" value="B">AUDIO FILE<br><br>
+    <input type="radio" name="question2" value="C">WORD FILE<br><br>
+    <input type="radio" name="question2" value="D">IMAGE FILE<br><br>
+  </li>
+</td></tr>
+  <tr><td>
+    <ol><li value="4">
+      <h3>NUMBERS OF KEYS ON STANDARD COMPUTERS KEYBOARD ARE   ??</h3>
+      <input type="radio" name="question3" value="A">105<br><br>
+      <input type="radio" name="question3" value="B">104<br><br>
+      <input type="radio" name="question3" value="C">110<br><br>
+      <input type="radio" name="question3" value="D">102<br><br>
+    </li>
+  </td></tr>
+    <tr><td>
+      <ol><li value="5">
+       <h3>FRENCH IS TONE OF THE OFFICIAL LANGUAGE OF WHICH UNION TERITORIES ??</h3>
+       <input type="radio" name="question4" value="A">GOA<br><br>
+       <input type="radio" name="question4" value="B">DAMAN AND DIU<br><br>
+       <input type="radio" name="question4" value="C">PUDUCHERRY<br><br>
+       <input type="radio" name="question4" value="D">LAKSHADWEEP<br><br>
+     </li></td></tr></table><hr color="white">
+   </ol></table>
+   <p align="center">
+<button onclick="returnScore()" class="button1">View Results</button>
+</p><hr color="white">
+  </body>
+  </div>
+  </body>
+</html>

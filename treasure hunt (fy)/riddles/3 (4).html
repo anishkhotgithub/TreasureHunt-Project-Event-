@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Connect</title>
+  </head>
+  <style>
+  .button {
+  height: 45px;
+  width: 350px;
+  font-size: 20px;
+  border-color:black;
+  }
+  .button1 {
+  height: 40px;
+  width: 50px;
+  font-size: 30px;
+  }
+
+.container{
+  width:814px;
+  margin:20px auto;
+  overflow:auto;
+
+  }
+  </style>
+<div class="container">
+  <center><script type="text/javascript">
+      function generateFullName()
+      {
+          document.getElementById('fullName').innerText =
+              document.getElementById('1').value + '' +
+              document.getElementById('2').value + '' +
+              document.getElementById('3').value 
+            ;
+      }
+      function myFunction()
+      {
+        var txt;
+        var a=document.getElementById('fullName').innerText;
+        var s="ICE";
+        var q="ice";
+        if (a==s||a==q) {
+          alert("Right answer. ");
+          window.open("word_search/index.html");
+        }
+        else {
+          window.alert("Wrong answer");
+          txt="Submit your answer again:";
+          ;
+        }
+        document.getElementById("demo").innerHTML = txt;
+      }
+  </script>
+    <body background="image\d.jpg" text="red"><br><br><br><br><br><br>
+    <font size="5" face="arial black"><u>I AM STRONG ENOUGH TO SMASH SHIPS,BUT I FEAR THE SUN.WHAT AM I</u>??<br><br><br><br></font>
+  <br><br/>
+    <input type="text" id="1" onkeyup="generateFullName()" maxlength="1" size="1" class="button1"/>
+    <input type="text" id="2" onkeyup="generateFullName()" maxlength="1" size="1" class="button1"/>
+    <input type="text" id="3" onkeyup="generateFullName()" maxlength="1" size="1" class="button1"/>
+   
+<br/><br/>
+   <font size="4" face="arial black"><h2> Full Name : <span id="fullName" /></h2></font><br>
+     <button type="button" class="button" id="demo" onclick="myFunction()">Submit your answer:</button>
+</center>
+  </body>
+</div>
+</html>

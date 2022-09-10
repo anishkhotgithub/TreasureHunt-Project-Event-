@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<style>
+  body{
+    background: url(ship6.jpg) no-repeat center center fixed;
+    background-size: cover;
+    
+    width: -80%;
+    height: 100%;
+    overflow: hidden;
+
+
+  }
+</style>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+var myVar;
+function myFunction() {//typing start button 
+ document.getElementById("abc").disabled = false;
+  var nm = 5;//time 
+  function myLoop () {
+  setTimeout(function () {
+      nm--;
+  if (nm <5 && nm>-1) {
+  if(nm==0){
+document.getElementById("abc").disabled = true;
+document.getElementById("start").disabled = true;
+document.getElementById("time").innerHTML =nm;
+document.getElementById("proceed").style.display = "block";
+document.body.onkeyup = function(e) {
+if( e.keyCode == 32 ) {
+e.preventDefault();
+}
+}
+}
+document.getElementById("time").innerHTML =nm;
+     myLoop();
+  }
+}, 1000)
+  }
+myLoop();
+}//time show function
+</script>
+
+    <script type="module">
+    var hits = 0;
+  var sum=1;
+var hitElement = document.querySelector( '.hits' );
+document.getElementById("abc").onkeyup = function(e) {
+  myVar = setTimeout(function(){
+ }, 60000);
+if( e.keyCode == 32 ) {
+  addHit();
+  // myVar = setTimeout(function(){ alert("Time Over"); }, 5000);
+}
+}
+var addHit = function() {
+hits++;
+renderHits();
+}
+var ht;
+var renderHits = function() {
+hitElement.innerHTML = hits;
+var cars = ["the ", "numbers ","in ","the ","table ","specify ","the ","first ","browser ","version ","hedge ","stresses ","the ","important ","of ","laughter ","because ","laughter ","induces ","secretion ","of ","good ","catecholamines ","which ","are ","hormones ","produced ","by ","adrenal ","gland ","; ","they ","can ","be ","both ","beneficial ","and ","harmful ","they ","are ","harmful ","when ","a ","person ","is ","angry ",];
+
+var i=hits-1;
+var ht=document.getElementById("abc").value;
+var htText=document.getElementById("abc");
+   htText.value="";
+  // var count=10;
+var a=ht;
+var c=cars[i];
+// alert(a+"    "+c);
+// var n = a.localeCompare(c);
+// var ab=0;
+if (a.localeCompare(c)) {
+document.getElementById(i).style.color ="red";
+}
+else{
+document.getElementById(i).style.color ="green";
+document.getElementById("sc").innerHTML =sum*1;
+sum++;
+}
+}
+// var resetHits = function() {
+// hits = 0;
+// renderHits();
+// }
+    </script>
+    <script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>
+<script type="text/javascript">
+	function reloadfunction(){
+ location.reload();
+}
+</script>
+  </head>
+  <body onload="hideButton()">
+<script>
+function hideButton()
+{
+    document.getElementById("proceed").style.display='none';
+    //or you can try
+    //document.getElementById("buttonId").style.visibility='hidden';
+}
+</script>
+  	<br>
+  	 	<br>
+ 	<br>
+ 	<br>
+
+  	<div class="container">
+  		<div class="row">
+  			<div class="col-sm-1"></div>
+  			<div class="col-sm-10">
+    <div id="activity" align="center" style="border:3px solid black">
+      <center><h1 style="color: red;">Welcome to typing Master</h1></center>
+    <center><a href="#" data-toggle="tooltip" title="Let's Go"><button type="button" class="btn btn-primary" onclick="myFunction()" id="start">Typing Start</button></a></center>
+  <center>  <h3 id="show">
+    <span id="0" >the</span>
+     <span id="1" >numbers</span>
+      <span id="2" >in</span>
+    <span id="3" > the</span> <span id="4" > table</span> <span id="5" > specify</span>
+     <span id="6" > the</span>
+    <span id="7" > first</span> <span id="8" > browser</span> <span id="9"> version</span> 
+<span id="10"> hedge</span><span id="11"> stresses</span> 
+<span id="12"> the</span><span id="13"> important</span>
+<span id="14"> of</span><span id="15"> laughter</span>
+<span id="16"> because</span><span id="17"> laughter</span>
+<span id="18"> induces</span><span id="19"> secretion</span>
+<span id="20"> of</span><span id="21"> good</span>
+<span id="22"> catecholamines</span><span id="23"> which</span>
+<span id="24"> are</span><span id="25"> hormones</span>
+<span id="26"> produced</span><span id="27"> by</span>
+<span id="28"> adrenal</span><span id="29"> gland</span>
+<span id="30"> ;</span><span id="31"> they</span>
+<span id="32"> can</span><span id="33"> be</span>
+<span id="34"> both</span><span id="35"> beneficial</span>
+<span id="36"> and</span><span id="37"> harmful</span>
+<span id="38"> they</span><span id="39"> are</span>
+<span id="40"> harmful</span><span id="41"> when</span>
+<span id="42"> a</span><span id="43"> person</span>
+<span id="44"> is</span><span id="45"> angry</span>
+
+
+
+
+
+
+
+
+
+
+</h3></center>
+<center>  <input type="text" size="39" onkeypress="my(event)" id="abc" disabled>
+  <button  id="time" type="button" class="btn btn-warning btn-md" style="    height: 32px;"></button>
+  <button id="myid" onclick="reloadfunction()" type="button" class="btn btn-success btn-md"><span class="glyphicon glyphicon-time"></span> Try Again</button></center>
+  
+
+<br>
+  <h1 style=" margin-left:42px;">Score:- </h1><h1 style="    margin-left: 179px;
+    margin-top: -47px;color:green" id="sc" ></h1>
+
+<!-- <center><h1 id="jk" style="color:red"></h1></center> -->
+  
+  <h1 id="counter" hidden><span class="hits" >0</span> times.</h1>
+  <!-- <a href="#" onclick="resetHits()" class="tryagain">RESTART</a> -->
+		</div>
+		<div class="col-sm-3"></div>
+      <button id = "proceed" class="btn btn-success btn-md"><a href="file:///C:/Users/ANISH/Desktop/TECHKRITI%20FY/riddles/3.html0">Proceed</button>
+	</div>
+</div>
+  </body>
+</html>
